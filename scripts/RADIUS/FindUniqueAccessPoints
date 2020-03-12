@@ -1,0 +1,1 @@
+tshark -r Radius.pcap -R 'radius.code == Access-Request' -T fields -e radius.Called_Station_Id -2 | sort | uniq | wc -l
